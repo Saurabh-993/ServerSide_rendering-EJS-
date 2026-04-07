@@ -1,0 +1,19 @@
+{
+  "name": "server_side_rendering_prac",
+  "version": "1.0.0",
+  "description": "\"This package basically hold our server side render configuration here we will practice the concept of vanilla html,css,javascript and Tailwind,EJS\"",
+  "license": "ISC",
+  "author": "Saurabh",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
