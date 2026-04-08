@@ -158,5 +158,145 @@
         You can <strong>Edit</strong> this through browser directly.
       </p>
     </div>
+    <h2>Also you should know some Advace Topics 🧗</h2>
+    <div>
+      <u><h3>Canvas</h3></u>
+      <div>
+        <em
+          ><strong>Basically through</strong> the <strong>canvas</strong> we
+          draw and create charts through in this <strong>JS.</strong>
+        </em>
+        <canvas
+          id="meraCanvas"
+          width="200"
+          height="100"
+          style="border: 1px solid rgb(0, 25, 100); border-radius: 25px"
+        >
+          <script>
+            let c = document.getElementById("meraCanvas");
+            let ctx = c.getContext("2d");
+            ctx.fillStyle = "cyan";
+            ctx.fillRect(10, 10, 150, 75); // Neela rectangle ban gaya
+          </script>
+        </canvas>
+      </div>
+    </div>
+    <br />
+    <div>
+      <u><h3>SVG</h3></u>
+      <em
+        ><strong
+          >Through Code you can genrate images and these images are vector
+          graphics.</strong
+        ></em
+      ><br />
+      <svg width="100" height="100">
+        <circle
+          cx="50"
+          cy="50"
+          r="49"
+          stroke="black"
+          stroke-width="3"
+          fill="yellow"
+        />
+      </svg>
+      <div>
+        <em
+          ><strong>NOTE:-</strong> The difference between
+          <strong>SVG</strong> and <strong>Canvas</strong> , whenever you want
+          to draw again and again or you just want to paint use
+          <strong>Canvas.</strong> whereas if you want to make
+          <u>Logo or Icon</u> go for <strong>SVG.</strong>
+        </em>
+      </div>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <h2>Google SEO Optimization ke liye 🌐</h2>
+    <div>
+      <u><h3>SEO: meta Tags + Schema.org</h3></u>
+      <p>
+        <strong
+          >This is basically to tell about our website so we get filter at
+          top.</strong
+        >
+      </p>
+      <ol type="1">
+        <li>
+          <div>
+            <em
+              >We put all the important meta Tags in <strong>Head.</strong> </em
+            ><br />
+            <p>Example is given below :-</p>
+            <pre
+              style="
+                display: block;
+                background-color: rgb(23, 23, 23);
+                overflow: auto;
+                border-radius: 25px;
+              "
+            >
+             <strong><code style="color: aliceblue;">
+&lt head>
+  <!-- Ye to basic hai -->
+&lt meta charset="UTF-8">
+&ltmeta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO ke liye top 3 -->
+&lt title>DevBhai - HTML Sikh Lo Free Me &lt /title>
+&lt meta name="description" content="HTML ke saare tags, attributes aur examples ek jagah. Beginners ke liye best.">
+&lt meta name="keywords" content="html, html tutorial, learn html hindi">
+  
+  <!-- Social media pe share kare to kya dikhe -->
+&lt meta property="og:title" content="DevBhai - HTML Sikh Lo">
+&lt meta property="og:image" content="https://devbhai.com/banner.jpg">
+&lt /head>
+            </code></strong>
+          </pre>
+          </div>
+        </li>
+        <li>
+          <div>
+            <em
+              ><u><strong>Schema.org</strong></u> basically this tells google in
+              details.</em
+            ><br />
+            <p>
+              So basically this is an <strong>JSON</strong> file that explains
+              about the page , that is this page is an article , Product or
+              Recipe. And through this google show rating and prices etc in
+              search.
+            </p>
+            <br />
+            <p>Example of code is given below:-</p>
+            <br />
+            <pre
+              style="
+                background-color: rgb(21, 20, 20);
+                display: block;
+                border-radius: 25px;
+                overflow: auto;
+              "
+            >
+             <strong><code style="color: aliceblue; ">
+&lt script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "HTML Complete Guide",
+  "author": {
+    "@type": "Person",
+    "name": "Dev Bhai"
+  },
+  "datePublished": "2026-04-07"
+}
+&lt /script>
+              </code></strong> 
+            </pre>
+          </div>
+        </li>
+      </ol>
+    </div>
   </body>
 </html>
