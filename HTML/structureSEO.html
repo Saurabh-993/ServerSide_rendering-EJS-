@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HTML ka full example page" />
+    <title>HTML Master Example</title>
+    <style>
+      /* Thoda CSS yahi daal diya, file nahi banani padi */
+      body {
+        background-color: #0f172a;
+        color: #e2e8f0;
+        font-family: Arial, sans-serif;
+        margin: 0;
+      }
+      header,
+      footer {
+        background-color: #1e293b;
+        padding: 1rem;
+      }
+      nav a {
+        color: #38bdf8;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+      main {
+        padding: 2rem;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #475569;
+        border-collapse: collapse;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER + NAVBAR -->
+    <header>
+      <h1>DevBhai <span style="color: #38bdf8">.com</span></h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="home">
+      <section id="about">
+        <h2>About <em>HTML</em></h2>
+        <p>
+          HTML ka full form <strong>HyperText Markup Language</strong> hai. Ye
+          web ki <b>backbone</b> hai.
+        </p>
+        <p>
+          Example of <i lang="la">carpe diem</i> - ye Latin phrase hai isliye
+          <i> tag use kiya.
+        </p>
+        <hr>
+
+        <h3>Features List</h3>
+        <ul>
+          <li>Easy to learn</li>
+          <li>Platform independent</li>
+          <li>Semantic tags support</li>
+        </ul>
+
+        <h3>Learning Steps</h3>
+        <ol type="1" start="1">
+          <li>Tags samjho</li>
+          <li>Attributes practice karo</li>
+          <li>Project banao</li>
+        </ol>
+      </section>
+
+      <section id="courses">
+        <h2>Our Courses</h2>
+        <article>
+          <h3>HTML Complete Course</h3>
+          <figure>
+            <img
+              src="../Assets/Images/Screenshot 2024-11-03 001015.png"
+              alt="HTML course banner"
+              width="300"
+            />
+            <figcaption>Fig1. - HTML Course Banner</figcaption>
+          </figure>
+          <p>Is course me <strong>0 se advanced</strong> sab cover hoga.</p>
+        </article>
+
+        <h3>Price Table</h3>
+        <table>
+          <thead>
+            <tr>
+              <th rowspan="2">Course</th>
+              <th colspan="2">Price</th>
+            </tr>
+            <tr>
+              <th>India</th>
+              <th>Global</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML Basic</td>
+              <td>₹0</td>
+              <td>$0</td>
+            </tr>
+            <tr>
+              <td>HTML Pro</td>
+              <td>₹499</td>
+              <td>$9</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside>
+        <h4>Pro Tip</h4>
+        <p title="Ye tooltip hai" > Hover kar idhar.</p>
+        <p contenteditable="true">
+          Mujhe edit karke dekh. Thanks to <code>contenteditable</code> attribute.
+        </p>
+      </aside>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="/submit" method="POST">
+          <label for="name">Naam:</label>
+          <input
+            type="text"
+            id="name"
+            name="username"
+            placeholder="Apna naam likh"
+            required
+          />
+          <br /><br>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="useremail" required />
+          <br /><br />
+
+          <label for="msg">Message:</label>
+          <textarea
+            id="msg"
+            name="message"
+            rows="4"
+            cols="40"
+            spellcheck="true"
+          ></textarea>
+          <br /><br />
+
+          <label for="course-select">Course chuno:</label>
+          <select id="course-select" name="course">
+            <option value="">--Select--</option>
+            <option value="basic">Basic</option>
+            <option value="pro">Pro</option>
+          </select>
+          <br /><br />
+
+          <input type="checkbox" id="agree" name="terms" required />
+          <label for="agree"
+            >I agree to <abbr title="Terms and Conditions">T&C</abbr></label
+          >
+          <br /><br />
+
+          <button type="submit">Bhej Do</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        &copy; 2026 DevBhai.com |
+        <a href="#home" style="color: #38bdf8">Top pe jao</a>
+      </p>
+      <div data-company-id="123" hidden>Ye div hidden hai par data-* attribute hai</div>
+    </footer>
+  </body>
+</html>
