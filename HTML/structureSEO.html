@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -38,7 +38,7 @@
   <body>
     <!-- HEADER + NAVBAR -->
     <header>
-      <h1>DevBhai <span style="color: #38bdf8">.com</span></h1>
+      <h1>MyWeb <span style="color: #38bdf8">.com</span></h1>
       <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -49,6 +49,15 @@
 
     <!-- MAIN CONTENT -->
     <main id="home">
+      <p>
+        check this for the smart Emet shortcuts,
+        <a
+          href="https://www.freecodecamp.org/news/how-to-write-faster-html-and-css-using-emmet/"
+          target="_blank"
+          style="color: aquamarine"
+          >click here!</a
+        >
+      </p>
       <section id="about">
         <h2>About <em>HTML</em></h2>
         <p>
@@ -57,9 +66,9 @@
         </p>
         <p>
           Example of <i lang="la">carpe diem</i> - ye Latin phrase hai isliye
-          <i> tag use kiya.
+          &lt;i&gt; tag use kiya.
         </p>
-        <hr>
+        <hr />
 
         <h3>Features List</h3>
         <ul>
@@ -77,16 +86,16 @@
       </section>
 
       <section id="courses">
-        <h2>Our Courses</h2>
+        <h2>Figma Designs</h2>
         <article>
-          <h3>HTML Complete Course</h3>
+          <h3>Figma & HTML Complete Course</h3>
           <figure>
             <img
               src="../Assets/Images/Screenshot 2024-11-03 001015.png"
               alt="HTML course banner"
               width="300"
             />
-            <figcaption>Fig1. - HTML Course Banner</figcaption>
+            <figcaption>Fig1. - Figma userpage Banner</figcaption>
           </figure>
           <p>Is course me <strong>0 se advanced</strong> sab cover hoga.</p>
         </article>
@@ -120,9 +129,10 @@
 
       <aside>
         <h4>Pro Tip</h4>
-        <p title="Ye tooltip hai" > Hover kar idhar.</p>
+        <p title="Ye tooltip hai">Hover kar idhar.</p>
         <p contenteditable="true">
-          Mujhe edit karke dekh. Thanks to <code>contenteditable</code> attribute.
+          Mujhe edit karke dekh. Thanks to
+          <code>contenteditable</code> attribute.
         </p>
       </aside>
 
@@ -137,7 +147,7 @@
             placeholder="Apna naam likh"
             required
           />
-          <br /><br>
+          <br /><br />
 
           <label for="email">Email:</label>
           <input type="email" id="email" name="useremail" required />
@@ -178,7 +188,9 @@
         &copy; 2026 DevBhai.com |
         <a href="#home" style="color: #38bdf8">Top pe jao</a>
       </p>
-      <div data-company-id="123" hidden>Ye div hidden hai par data-* attribute hai</div>
+      <div data-company-id="123" hidden>
+        Ye div hidden hai par data-* attribute hai
+      </div>
     </footer>
   </body>
 </html>
