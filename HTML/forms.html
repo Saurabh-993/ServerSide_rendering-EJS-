@@ -187,7 +187,7 @@
         <fieldset>
           <legend>Personal Info</legend>
           <label>Naam: <input type="text" name="name" /></label>
-          <label>Age: <input type="number" name="age" /></label>
+          <label>Age: <input type="number" name="age" min="3" /></label>
         </fieldset>
       </form>
     </div>
@@ -785,5 +785,352 @@
         </tr>
       </tbody>
     </table>
+    <br />
+    <br />
+    <hr />
+    <br />
+    <br />
+    <h2>Important Concept</h2>
+    <br />
+    <h3><u>name & value Attribute</u></h3>
+    <p>
+      so you have to understand one thing that <strong>name</strong> attribute
+      is very important, as through it the data is transferred to the backend.
+    </p>
+    <p>
+      <strong>Basically,</strong> whenever we submit a form the browser sends
+      the <em>name&value</em> pair to the server (Backend), similar to the
+      key-value pair.
+    </p>
+    <pre
+      style="
+        display: block;
+        background-color: rgb(32, 31, 31);
+        border-radius: 25px;
+      "
+    >
+      <code style="color: white;">
+        &ltinput type="text" name="username" value="Rohan">
+        &ltinput type="password" name="pass" value="12345">
+      </code>
+    </pre>
+    <p>So after submit, the server will get it.</p>
+    <pre
+      style="
+        display: block;
+        background-color: rgb(32, 31, 31);
+        border-radius: 25px;
+      "
+    >
+      <code style="color: white;">
+        username=Rohan&pass=12345
+      </code>
+    </pre>
+    <p>
+      <strong>Note:-</strong>If you didn't put the name attribute than server
+      will not get the information and browser will ignore it.
+    </p>
+    <br />
+    <h3><u>name & value</u> with <u>checker-box & radio</u></h3>
+    <p>
+      whenever you put the <em>name & value</em> attribute in input tags with
+      other attributes like <em>checker-box & radio</em> what actually happens
+      is a bit tricky thing.
+    </p>
+    <p>suppose you put code like this:-</p>
+    <pre
+      style="
+        display: block;
+        background-color: rgb(32, 31, 31);
+        border-radius: 25px;
+      "
+    >
+      <code style="color: white;">
+        &ltinput type="checkbox" name="terms" checked>
+      </code>
+    </pre>
+    <p>
+      then browser by default will put the <strong>value ="on"</strong> (where
+      there is no "value" attribute is set by the user) i.e.
+    </p>
+    <pre
+      style="
+        display: block;
+        background-color: rgb(32, 31, 31);
+        border-radius: 25px;
+      "
+    >
+      <code style="color: white;">
+        terms=on
+      </code>
+    </pre>
+    <h4><em>but when we put the values also,</em></h4>
+    <pre
+      style="
+        display: block;
+        background-color: rgb(32, 31, 31);
+        border-radius: 25px;
+      "
+    >
+      <code style="color: white;">
+        &ltinput type="checkbox" name="skills" value="HTML" checked>
+        &ltinput type="checkbox" name="skills" value="CSS" checked>
+      </code>
+    </pre>
+    <p>
+      then after submitting, the <strong>Server</strong> will know the values,
+      or you can say that the <strong>Backend</strong> will know about the
+      checkboxes that got ticked✅.
+    </p>
+    <pre
+      style="
+        display: block;
+        background-color: rgb(32, 31, 31);
+        border-radius: 25px;
+      "
+    >
+      <code style="color: white;">
+        skills=HTML&skills=CSS
+      </code>
+    </pre>
+    <p>
+      so, In the table below we will discuss when do we need the
+      <strong>value</strong> attribute.
+    </p>
+    <br />
+    <table
+      style="
+        border-collapse: collapse;
+        border-radius: 25px;
+        border-width: 3px;
+        border-color: black;
+        border-style: solid;
+        width: 100%;
+      "
+    >
+      <caption
+        style="
+          font-family:
+            &quot;Franklin Gothic Medium&quot;, &quot;Arial Narrow&quot;, Arial,
+            sans-serif;
+          font-size: 21px;
+          padding: 11px;
+        "
+      >
+        when do we need
+        <strong>value</strong>
+        attribute
+      </caption>
+      <thead style="background-color: aliceblue">
+        <th
+          style="
+            border-width: 2px;
+            text-align: center;
+            border-style: solid;
+            border-color: black;
+          "
+        >
+          Situation
+        </th>
+        <th
+          style="
+            border-width: 2px;
+            text-align: center;
+            border-style: solid;
+            border-color: black;
+          "
+        >
+          Without "value"
+        </th>
+        <th
+          style="
+            border-width: 2px;
+            text-align: center;
+            border-style: solid;
+            border-color: black;
+          "
+        >
+          With "value="HTML""
+        </th>
+      </thead>
+      <tbody style="background-color: rgb(255, 240, 246)">
+        <tr>
+          <th
+            style="
+              border-width: 2px;
+              text-align: center;
+              border-style: solid;
+              border-color: black;
+            "
+          >
+            Single checkbox: "Terms accept kiye?"
+          </th>
+          <th
+            style="
+              border-width: 2px;
+              text-align: center;
+              border-style: solid;
+              border-color: black;
+            "
+          >
+            terms=on aayega. Kaam chal jayega kyunki bas haan/na check karna hai
+          </th>
+          <th
+            style="
+              border-width: 2px;
+              text-align: center;
+              border-style: solid;
+              border-color: black;
+            "
+          >
+            Zaroorat nahi
+          </th>
+        </tr>
+        <tr>
+          <th
+            style="
+              border-width: 2px;
+              text-align: center;
+              border-style: solid;
+              border-color: black;
+            "
+          >
+            Multiple checkbox: Skills chunni hain
+          </th>
+          <th
+            style="
+              border-width: 2px;
+              text-align: center;
+              border-style: solid;
+              border-color: black;
+            "
+          >
+            skills=on&skills=on aayega. Backend ko ghanta nahi pata chalega ki
+            kaunsi skill thi
+          </th>
+          <th
+            style="
+              border-width: 2px;
+              text-align: center;
+              border-style: solid;
+              border-color: black;
+            "
+          >
+            skills=HTML&skills=CSS aayega. Ab backend ko exact pata hai
+          </th>
+        </tr>
+        <tr>
+          <th
+            style="
+              border-width: 2px;
+              text-align: center;
+              border-style: solid;
+              border-color: black;
+            "
+          >
+            Radio: Gender chunna hai
+          </th>
+          <th
+            style="
+              border-width: 2px;
+              text-align: center;
+              border-style: solid;
+              border-color: black;
+            "
+          >
+            gender=on aayega chahe Male select karo ya Female. Dono ka same
+            bhejega. Bekar
+          </th>
+          <th
+            style="
+              border-width: 2px;
+              text-align: center;
+              border-style: solid;
+              border-color: black;
+            "
+          >
+            gender=male ya gender=female aayega. Perfect
+          </th>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <h3><u>Example of radio:-</u></h3>
+    <p><strong>First,</strong> we will discuss the wrong way:</p>
+    <pre
+      style="
+        display: block;
+        background-color: rgb(32, 31, 31);
+        border-radius: 25px;
+      "
+    >
+      <code style="color: white;">
+        &ltinput type="radio" name="gender"> Male
+        &ltinput type="radio" name="gender"> Female
+      </code>
+    </pre>
+    <p>
+      This is the wrong way , because here we didn't provide any
+      <em>value</em> attribute.
+    </p>
+    <p>
+      So here whatever you select It doesn't matter, as the
+      <strong>Server</strong> will always get
+      <strong>"gender = on"</strong> Server will never know that which one got
+      selected.
+    </p>
+    <br />
+    <p><strong>Now,</strong> we will discuss the right way:</p>
+    <pre
+      style="
+        display: block;
+        background-color: rgb(32, 31, 31);
+        border-radius: 25px;
+      "
+    >
+      <code style="color: white;">
+        &ltinput type="radio" name="gender" value="male"> Male
+        &ltinput type="radio" name="gender" value="female"> Female
+      </code>
+    </pre>
+    <p>
+      This is the right way , As here we have provided the
+      <em>value</em> attribute.
+    </p>
+    <p>
+      Now here, <strong>Server</strong> will get either
+      <strong>"gender = male"</strong> or <strong>"gender = female"</strong>.
+    </p>
+    <br />
+    <h4>In the easiest way we can understand the whole discuss point as:-</h4>
+    <ol type="1">
+      <li>
+        <strong>name:-</strong>Form ka data backend me bhejne ke liye compulsory
+        hai. Ye "key" banata hai.
+      </li>
+      <li>
+        <strong>value:-</strong>Server ko kya value bhejni hai vo decide karta
+        hai.
+        <ul>
+          <li>
+            <strong>Text, Email, Password mai:</strong> User jo type karega wahi
+            value ban jayegi. Isliye yaha value="" likhne ki zaroorat nahi.
+          </li>
+          <li>
+            <strong>Checkbox, Radio, Option me:</strong> User kuch type nahi
+            karta, sirf select karta hai. To server ko kya bhejna hai vo tu
+            value="" me batayega.
+            <p>
+              Nahi batayega to browser apne se on bhej dega jo 99% cases me
+              bekar hai.
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <strong
+      ><em>Ek line me:</em> name batata hai "kaunsa dabba hai", value batata hai
+      "dabbe ke andar kya hai".</strong
+    >
   </body>
 </html>
