@@ -8,7 +8,188 @@
   <body>
     <h2>Here We will practice forms</h2>
     <div>
-      <form action=""></form>
+      <form>
+        <!-- 1. TEXT: Normal text likhne ke liye -->
+        <label for="name">Naam:</label>
+        <input
+          type="text"
+          id="name"
+          name="fullname"
+          placeholder="Apna poora naam"
+          minlength="3"
+          maxlength="50"
+          required
+        />
+
+        <!-- 2. PASSWORD: Dots dikhenge typing me -->
+        <label for="pass">Password:</label>
+        <input
+          type="password"
+          id="pass"
+          name="userpass"
+          minlength="8"
+          required
+        />
+
+        <!-- 3. EMAIL: @ check karta hai, mobile me @ wala keyboard khulta -->
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" name="useremail" multiple />
+        <!-- multiple = comma deke 2 email daal sakte -->
+
+        <!-- 4. NUMBER: Sirf number, up-down arrow aate hain -->
+        <label for="age">Age:</label>
+        <input
+          type="number"
+          id="age"
+          name="userage"
+          min="18"
+          max="60"
+          step="1"
+          value="25"
+        />
+
+        <!-- 5. TEL: Mobile number ke liye, mobile me number pad khulta -->
+        <label for="phone">Phone:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="userphone"
+          pattern="[0-9]{10}"
+          placeholder="10 digit number"
+        />
+
+        <!-- 6. URL: http:// check karta hai -->
+        <label for="website">Website:</label>
+        <input
+          type="url"
+          id="website"
+          name="usersite"
+          placeholder="https://example.com"
+        />
+
+        <!-- 7. SEARCH: Search box, cross button aata hai clear karne ko -->
+        <label for="search">Dhoondo:</label>
+        <input type="search" id="search" name="query" />
+
+        <!-- 8. DATE: Calendar khul jata hai -->
+        <label for="dob">Janam Din:</label>
+        <input
+          type="date"
+          id="dob"
+          name="userdob"
+          min="2000-01-01"
+          max="2010-12-31"
+        />
+
+        <!-- 9. TIME: Time select karo -->
+        <label for="alarm">Time:</label>
+        <input type="time" id="alarm" name="alarmtime" />
+
+        <!-- 10. DATETIME-LOCAL: Date + Time dono ek saath -->
+        <label for="meeting">Meeting:</label>
+        <input type="datetime-local" id="meeting" name="meetingtime" />
+
+        <!-- 11. MONTH: Month + Year select -->
+        <label for="expiry">Card Expiry:</label>
+        <input type="month" id="expiry" name="cardexpiry" />
+
+        <!-- 12. WEEK: Week select karo -->
+        <label for="week">Week chuno:</label>
+        <input type="week" id="week" name="selectedweek" />
+
+        <!-- 13. COLOR: Color picker khul jata hai -->
+        <label for="color">Fav Color:</label>
+        <input type="color" id="color" name="favcolor" value="#FF1DDD" />
+
+        <!-- 14. RANGE: Slider aata hai -->
+        <label for="volume">Volume: <span id="vol-val">50</span></label>
+        <input
+          type="range"
+          id="volume"
+          name="vol"
+          min="0"
+          max="100"
+          step="10"
+          value="50"
+          oninput="document.getElementById('vol-val').innerText = this.value"
+        />
+
+        <!-- 15. FILE: File upload ke liye -->
+        <label for="dp">Photo Upload:</label>
+        <input
+          type="file"
+          id="dp"
+          name="profilepic"
+          accept="image/*"
+          multiple
+        />
+        <!-- accept="image/*" = sirf image, ".pdf,.doc" bhi de sakte, multiple = kai files -->
+
+        <!-- 16. CHECKBOX: Haan/Na, multiple select ho sakte -->
+        <input type="checkbox" id="html" name="skills" value="HTML" checked />
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css" name="skills" value="CSS" />
+        <label for="css">CSS</label>
+
+        <!-- 17. RADIO: Ek hi select hoga group me se. name same hona chahiye -->
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female" checked />
+        <label for="female">Female</label>
+
+        <!-- 18. HIDDEN: User ko dikhta nahi, par form ke saath jata hai -->
+        <input type="hidden" name="userid" value="45" />
+
+        <!-- 19. SUBMIT: Form submit karne ka button -->
+        <input type="submit" value="Form Bhej Do" />
+
+        <!-- 20. RESET: Saara form khali kar de -->
+        <input type="reset" value="Saaf Karo" />
+
+        <!-- 21. BUTTON: Kuch nahi karta, JS se kaam karwana padta hai -->
+        <input type="button" value="Click Me" onclick="alert('Hello')" />
+
+        <!-- 22. IMAGE: Image hi submit button ban jata hai -->
+        <input
+          type="image"
+          src="../Assets/Images/Screenshot 2024-11-03 001015.png"
+          alt="Submit"
+          width="55"
+          style="border-radius: 25px"
+        />
+        <!-- 23. ye Input jaisa hi h lekin it is for writting large texts -->
+        <label for="address">Address:</label>
+        <textarea
+          id="address"
+          name="useraddress"
+          rows="4"
+          cols="50"
+          placeholder="This tag is for writting for large texts like address"
+          maxlength="200"
+        ></textarea>
+
+        <!-- 24. Select + Option ,ye Boht saare options ko ek saath choose karne ke liye h size attribute se aap choose kar sakte ho kitne option ek baari mai dekhna h  -->
+        <label for="city">City:</label>
+        <select id="city" name="usercity" size="0" required>
+          <option value="">--Select Karo--</option>
+          <option value="delhi">Delhi</option>
+          <option value="mumbai" selected>Mumbai</option>
+          <optgroup label="UP ke Shahar">
+            <option value="lucknow">Lucknow</option>
+            <option value="kanpur">Kanpur</option>
+          </optgroup>
+        </select>
+
+        <!-- 25. Fieldset + legend , ye forms ke parts ko group karne ke liye hota h ,Box ban jata hai uske upar heading aa jati hai. Form bada ho to use karo.-->
+        <fieldset>
+          <legend>Personal Info</legend>
+          <label>Naam: <input type="text" name="name" /></label>
+          <label>Age: <input type="number" name="age" /></label>
+        </fieldset>
+      </form>
     </div>
   </body>
 </html>
