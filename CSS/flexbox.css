@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: x-large;
+  padding-left: 1rem;
+  padding-top: 2rem;
+}
+
+.maincontainer {
+  background-image: linear-gradient(rgb(189, 217, 242), rgb(239, 239, 171));
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  padding: 2px;
+  flex-wrap: wrap;
+  height: 500px;
+  justify-content: center; /*this property controls where the flex item should sit on the main axis*/
+  align-content: center; /*this property controls where the flex item should be on cross-axis*/
+}
+
+.firstelement {
+  background-image: radial-gradient(rgba(255, 225, 0), rgb(254, 138, 66));
+  border-radius: 25px;
+  padding: 2px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: large;
+  margin: 11px;
+  /* flex-grow: 2; /*basically through flex grow we can define the ratio through which the item should grow when their is space w.r.t other items */
+  /* flex-shrink: 3; /*this comes into play when flex items are overflowing their container. This value specifies how much an item will shrink in order to prevent overflow. */
+}
+
+.secondelement {
+  background-image: radial-gradient(rgb(17, 236, 68), rgb(38, 244, 234));
+  border-radius: 25px;
+  padding: 2px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: large;
+  margin: 11px;
+  align-items: flex-end;
+}
+.thirdelement {
+  background-image: radial-gradient(rgb(238, 255, 0), rgb(99, 239, 71));
+  border-radius: 25px;
+  padding: 2px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: large;
+  margin: 11px;
+  order: 2; /*you can decide the order of the flexbox item through it. note by default all elements have an order:0 and according to source code they are arrange.*/
+}
+.fourthelement {
+  background-image: radial-gradient(rgb(195, 109, 226), rgb(78, 68, 228));
+  border-radius: 25px;
+  padding: 2px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: large;
+  margin: 11px;
+}
+.fifthelement {
+  background-image: radial-gradient(rgb(222, 90, 129), rgb(246, 162, 176));
+  border-radius: 25px;
+  padding: 2px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: large;
+  margin: 11px;
+}
