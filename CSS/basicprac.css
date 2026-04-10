@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  color: rgb(0, 0, 0);
+  font-size: large;
+  padding: 1rem;
+  font-weight: bolder;
+}
+
+.static {
+  position: static;
+  /* no effect will happen on static block */
+  top: 1000px;
+  left: 50px;
+  /* static block will remain at its postition of normal flow. */
+  background-image: linear-gradient(rgb(255, 0, 242), rgb(168, 130, 238));
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 25px;
+  border-radius: 25px;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.relative {
+  position: relative;
+  left: 70px;
+  top: 45px;
+  background-image: linear-gradient(rgb(255, 208, 0), rgb(175, 238, 130));
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 25px;
+  border-radius: 25px;
+  font-size: medium;
+  font-weight: bold;
+}
+.absolute {
+  position: absolute;
+  left: 190px;
+  background-image: linear-gradient(rgb(121, 103, 236), rgb(130, 170, 238));
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 25px;
+  border-radius: 25px;
+  font-size: medium;
+  font-weight: bold;
+}
+.fixed {
+  position: fixed;
+  top: 150px;
+  right: 25px;
+  background-image: linear-gradient(rgb(8, 249, 156), rgb(243, 99, 80));
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 25px;
+  border-radius: 25px;
+  font-size: medium;
+  font-weight: bold;
+}
+.sticky {
+  position: sticky;
+  transform: translateX(+150px);
+  top: 30px;
+  background-image: linear-gradient(rgb(0, 170, 255), rgb(11, 255, 170));
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 25px;
+  border-radius: 25px;
+  font-size: medium;
+  font-weight: bold;
+}
+.parent {
+  border-style: solid;
+  z-index: -1;
+  position: relative;
+  left: 11%;
+  background-image: linear-gradient(rgb(231, 244, 255), rgb(249, 249, 198));
+  width: 500px;
+  height: 1000px;
+  text-align: center;
+  padding: 25px;
+  border-radius: 25px;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.nextblock {
+  border-style: solid;
+  z-index: -1;
+  position: relative;
+  left: 11%;
+  background-image: linear-gradient(rgb(231, 244, 255), rgb(249, 249, 198));
+  width: 500px;
+  height: 1000px;
+  text-align: center;
+  padding: 25px;
+  border-radius: 25px;
+  font-size: medium;
+  font-weight: bold;
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS_basic</title>
+    <link rel="stylesheet" href="../CSS/basicprac.css" />
+  </head>
+  <body>
+    <header>
+      <p>So from here we will learn about positions.</p>
+      <p>
+        Note:-
+        <em
+          >For the sticky positions you have to understand that the triggered
+          condition for it positining happens when you move the scrolling
+          (basically if you will scroll the page than only it will maintain its
+          relative poistion with its parent element), so in normal condition to
+          make it appear in specific position you have to use
+          <u>tranform:translation()</u> property.</em
+        >
+      </p>
+    </header>
+    <main>
+      <div class="static">Static Block</div>
+      <div class="relative">Relative Block</div>
+      <div class="absolute">Absolute Block</div>
+      <div class="fixed">Fixed Block</div>
+      <div class="parent">
+        <div class="sticky">Sticky Block</div>
+      </div>
+      <br /><br />
+      <hr
+        style="
+          border-width: 5px;
+          border-color: black;
+          border-style: solid;
+          border-radius: 25px;
+        "
+      />
+      <br /><br />
+      <div class="nextblock"></div>
+    </main>
+  </body>
+</html>
