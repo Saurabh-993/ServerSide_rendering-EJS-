@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image:
+    url(../Assets/Images/basicback.png),
+    linear-gradient(to top, rgb(170, 212, 249), rgb(244, 244, 107));
+  background-repeat: repeat-y, no-repeat;
+  background-position: center left;
+  background-size: 25%, auto;
+  /* here we have just shown that how can use multiple assets in background through background image and note that the double values in every property are respective. */
+}
+
+main {
+  background-image: url(../Assets/Images/dragonIllustration.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+p {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: x-large;
+  margin: 1.5rem;
+}
+
+.textshadow {
+  text-shadow: 1px 1px 11px rgb(0, 119, 255);
+  /* the first one is for shadow on X-axis second one is for shadow on Y-axis and third show the blurness and fourth one is about the color of blurness. */
+}
+
+.gradientbox {
+  width: 250px;
+  height: 250px;
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 255, 255, 0.3),
+    rgba(43, 255, 0, 0.4),
+    rgb(255, 120, 2)
+  );
+  /* so here it is tri-color gradient (you can place number by your choice and alpha channel maintains the tranparency) */
+  border-radius: 25px;
+  border-style: solid;
+  margin: 1.5rem;
+}
+
+img{
+  object-fit: cover;
+  object-position: right;
+  width:300px;
+  border-radius: 25px;
+}
