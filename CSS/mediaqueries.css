@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    to left,
+    rgb(233, 233, 158),
+    rgb(142, 187, 226)
+  );
+}
+
+.portrait {
+  display: none;
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: x-large;
+  margin: 1.5rem;
+}
+@media screen and (orientation: portrait) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .landscape {
+    display: none;
+  }
+  .portrait {
+    display: block;
+  }
+
+  p {
+    font-family: serif;
+    font-weight: bolder;
+    font-size: x-large;
+    margin: 1.5rem;
+  }
+
+  body {
+    background-image: linear-gradient(
+      to right,
+      rgb(248, 202, 210),
+      rgb(246, 217, 164)
+    );
+  }
+}
