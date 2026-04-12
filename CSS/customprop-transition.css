@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(to left,rgb(26, 26, 26),#242424);
+}
+
+:root {
+  --Htextcolor:	#f5f5f5;
+  --Ptextcolor: #ffffff;
+  /* note:- the variable always start from double -- */
+  /* note:- if you defined the variable in a particular scope like p,body etc than it will be local to that scope. */
+  /* note:- The root Pseudoclass is very useful as the variable declare inside it are global variables. */
+}
+p {
+  font-family: fantasy;
+  margin: 1.5rem;
+  font-size: x-large;
+  color: var(--Htextcolor);
+}
+
+main p{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 1.5rem;
+    font-size: larger;
+    color: var(--Ptextcolor);
+}
