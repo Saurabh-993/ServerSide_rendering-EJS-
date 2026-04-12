@@ -11,7 +11,28 @@
       <p>From Here we will learn about some custom properties</p>
     </header>
     <main>
-        <p><u>var( ):-</u> it is used for having variables </p>
+      <p>
+        <u>var( ):-</u> it is used for having variables, also we can provide
+        fallback values in it ,for eg. var(Htextcolor,red,blue) so here red and
+        blue are fallbacks.
+      </p>
+      <h2><u>Dark Mode</u></h2>
+      <p>for dark mode we have to use</p>
+      <pre>
+        @media (prefer-color-scheme:dark){
+            then you have to wrire all the variables that you have 
+            writtern in normal document and provide them another value.
+        }
+        <strong>Note:-</strong>instead of dark you can also use light for light mode.
+      </pre>
+      <strong
+        ><p>
+          Note: If your device is in dark mode than your :root mode is dark
+          (device understand default as light in such condition your default is
+          dark so device understand dark as light and light as dark so you have
+          to write prefer-color-scheme:light) than it will work.
+        </p></strong
+      >
     </main>
   </body>
 </html>
