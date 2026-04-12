@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Classes & Elements</title>
+    <link rel="stylesheet" href="../CSS/pseudoclass-elements.css" />
+  </head>
+  <body>
+    <header>
+      <p>Now we are going to practice <u>PseudoClasses & PseudoElements</u>.</p>
+      <br />
+      <h2 class="classbefore"><u>Pseudo Class</u></h2>
+    </header>
+    <main>
+      <p>
+        Here,<br />we can see that whenever you hover over the pseudo class you
+        will get the color changing of Pseudo Class.
+      </p>
+      <p>
+        see the button below how we make it when you hover over it, and when you
+        click over it.
+      </p>
+      <button>Click it!</button>
+      <h2 class="elembefore"><u>Pseudo Elements</u></h2>
+      <p class="pseudoelem">
+        Pseudo Elements are used on selector through which we can style an
+        specific part of that element. for example in this paragraph we will
+        change the color of the first line only (and note it depends on the
+        viewport it means pseudoelements are for visual appearance only.).
+      </p>
+      <p>
+        Also the First line of the above paragraph will change color when you
+        hover over it! So it means that you can use pseudoelements over
+        pseudoclasses and Now we know <strong>PseudoClasses</strong> are for
+        state and <strong>PseudoElements</strong> are for visual appearance over
+        an state.
+      </p>
+      <p>
+        <strong>Note:-</strong>we can write any
+        <em>Pseudoclasses & Pseudoelements</em> without
+        <em>anchor elements & originating elements </em>( that are nothing just
+        a fancy name of the selectors behind them),but then it will behave like
+        universal that is:-
+      </p>
+
+      <pre>
+        :hover is basically 
+
+        *:hover (it means that it will get applied on all the)
+      </pre>
+      <!-- NOTE:- -->
+      <!-- <p> ke andar <pre> valid nahi HTML5 mein! Jab <pre> start hota hai, browser automatically <p> ko close kar deta hai (implied end tag) -->
+    </main>
+  </body>
+</html>

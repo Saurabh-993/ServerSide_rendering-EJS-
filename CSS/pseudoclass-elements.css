@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(to left, beige, rgb(249, 208, 214));
+}
+p {
+  margin: 1.5rem;
+  font-family: fantasy;
+  font-size: x-large;
+}
+
+h2 {
+  margin: 1.5rem;
+  font-size: x-large;
+}
+
+h2:hover {
+  color: cyan;
+  font-style: italic;
+}
+
+main p {
+  margin: 1.5rem;
+  font-family: "Times New Roman", Times, serif;
+  /* note:- even you didn't adjust the font here It will got auto to x-large as this selector is only here to override the previous one. */
+  font-size: x-large;
+}
+
+button {
+  padding: 15px 35px;
+  border: 2px solid transparent; /* Glow base */
+  border-radius: 50px;
+  background: #1a1a1a;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  left: 1.5rem;
+}
+
+button:hover {
+  color: azure;
+  background-color: rgb(4, 255, 46);
+  text-shadow: 0 0 15px rgb(0, 242, 255);
+
+  /* AFTER EFFECTS DEEP GLOW - 5 Layers! */
+  box-shadow: 
+    /* Layer 1: Sharp inner border glow */
+    0 0 8px rgba(0, 255, 70, 0.9),
+    /* Layer 2: Medium green glow */ 0 0 20px rgba(4, 255, 46, 0.8),
+    /* Layer 3: Deep outer green */ 0 0 35px rgba(4, 255, 46, 0.6),
+    /* Layer 4: Cyan border pulse */ 0 0 15px rgba(0, 242, 255, 0.7),
+    0 0 45px rgba(0, 242, 255, 0.4),
+    /* Layer 5: Ultra deep halo */ 0 0 70px rgba(0, 255, 70, 0.3);
+}
+
+button:active {
+  color: rgb(255, 122, 6);
+  background-color: rgb(254, 246, 29);
+  text-shadow: 1 1 15px rgb(255, 35, 97);
+  box-shadow:
+    0 0 11px red,
+    0 0 21px rgb(248, 21, 252),
+    0 0 35px rgb(255, 0, 140);
+}
+/* this will work when you will click the button */
+
+main p:nth-child(1) {
+  color: rgb(96, 11, 241);
+  font-family: monospace;
+}
+/* Here we just used the nth-child(1) it is similar to the first child */
+
+.pseudoelem::first-line {
+  color: rgb(37, 13, 247);
+}
+.pseudoelem:hover::first-line {
+  color: rgb(239, 90, 15);
+}
+
+pre {
+  background-color: #1a1a1a;
+  color: whitesmoke;
+  border-radius: 50px;
+  padding: 7px;
+  font-size: larger;
+}
+
+::selection {
+  color: yellow;
+  background-color: rgb(157, 139, 139);
+}
+/* through this we change the way selectionlooks you can select any element and find that now it is different color and background  */
+
+.classbefore::before {
+  content: ":";
+}
+
+.elembefore::before {
+  content: "::";
+}
+
+.classbefore::after {
+  content: " (note the ':' and this text is made with ::before)";
+}
