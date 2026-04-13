@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TailWindCSS</title>
+    <link rel="stylesheet" href="../src/actual.css" />
+  </head>
+  <body class="innipinni">
+    <!-- custom class property built by us -->
+    <header>
+      <p class="text-black text-3xl font-bold m-2.5">
+        So we are going to start TailwindCSS
+      </p>
+      <main>
+        <p class="m-2.5 text-black text-2xl font-mono">
+          Here we just learn how to setup TailwindCSS through HTML and CSS only
+        </p>
+        <pre class="bg-amber-100 rounded-3xl overflow-auto">
+            npx @tailwindcss/cli -i ./main/tail-wind.css -o ./src/actual.css --watch  --content './main/index.html'
+        </pre>
+        <p class="m-2.5">
+          Through the above command I just run it on the terminal and it also
+          created the <u>actual.css</u>.
+        </p>
+      </main>
+    </header>
+  </body>
+</html>

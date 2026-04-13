@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* so here basically you can write your default css and tailwind will proceed,
+ it to the actual.css from where the index.html  will read it and process it.*/
+/* 
+ Note:- This Section is basically divided into 3 layers (These layers are nothing just are
+ for clean coding and one more use of their is to set priority.)
+ */
+
+/* 
+ first layer is the "  @layer base " it is the least prior the styles written under this can be 
+ overwritten by the styles written in @component and @utilities layer.
+ */
+/* 
+ Second layer is the component layer and third one is utilities layer.
+ below are some examples how to use these layers
+ */
+
+@layer base {
+  .innipinni {
+    background-color: turquoise;
+  }
+}
