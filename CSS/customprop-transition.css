@@ -50,6 +50,28 @@ pre {
   background-color: var(--Cardbgcolor);
 }
 
+.transit {
+  height: 150px;
+  width: 150px;
+  background-color: var(--Cardbcolor);
+  margin: 1.5rem;
+  border-radius: 25px;
+  text-align: center;
+  color: var(--Ptextcolor);
+  align-content: center;
+  font-size: x-large;
+  overflow: auto;
+  padding: 0.5rem;
+}
+
+.transit:active {
+  transform: translate(450px, 130%) scale(50%) skew(30deg, 20deg);
+  transition-property: transform; /*Here you can also write "all" if you want all the properties to provide transitions.*/
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.3s;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --Htextcolor: #121212;
@@ -89,5 +111,21 @@ pre {
     padding: 1rem;
     border-color: var(--Cardbcolor);
     background-color: var(--Cardbgcolor);
+  }
+
+  .transit {
+    height: 150px;
+    width: 150px;
+    background-color: var(--Cardbcolor);
+    margin: 1.5rem;
+    border-radius: 25px;
+    text-align: center;
+    color: var(--Ptextcolor);
+    align-content: center;
+    font-size: x-large;
+  }
+
+  .transit:active {
+    transform: translate(450px, 130%) scale(50%) skew(30deg, 20deg);
   }
 }
