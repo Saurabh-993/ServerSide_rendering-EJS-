@@ -1,11 +1,28 @@
 import express from "express";
 import connect from "./connectiondb.js";
 import mongoose from "mongoose";
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
 const PORT = 3000;
 connect();
 const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+//------------------------------------------------------------------------------------------------
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+app.use(express.static(path.join(__dirname, "public")));
+
+//--------------------note the above line are used only in new javascript type:module if you are using type:commonjs than you can directly write the last line------
+
+app.set("view engine", "ejs"); //It is used to set any global enviornment.
+
 app.get("/", (req, res) => {
-  res.send("hey dude this is home page");
+  res.render("index"); //you can also write index.ejs but our view engine already know what to find inside the views
 });
 
 const schema = new mongoose.Schema({
