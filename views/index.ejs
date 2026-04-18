@@ -4,11 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../stylesheets/index.css" />
+
     <title>EJS work</title>
   </head>
-  <body>
-    <h1 style="font-family: fantasy">Hello <%= 2+2 %></h1>
+  <body class="bg-zinc-900">
+    <div>
+      <h1 style="font-family: fantasy" class="text-5xl text-cyan-300">
+        This is the Welcome Page!
+      </h1>
+    </div>
+    <a class="text-zinc-600 font-mono text-3xl" href="./cards">
+      Move to the card page
+    </a>
+
     <!-- hey it is just the linter problem if you are getting any tag in red part as we don't had install any ejs file formatter -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="/scripts/firstscript.js"></script>
   </body>
 </html>

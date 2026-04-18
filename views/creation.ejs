@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheets/index.css" />
+    <title>Create</title>
+  </head>
+  <body class="bg-zinc-900">
+    <h1 class="text-orange-500 text-5xl" style="margin-left: 22px">
+      Card Creation!
+    </h1>
+    <div>
+      <form
+        action="/creation"
+        method="post"
+        class="m-2.5 text-amber-50 font-bold font-san"
+      >
+        <input
+          id="name"
+          type="text"
+          placeholder="Name please!"
+          name="name"
+          class="bg-zinc-600 border-zinc-300 rounded-2xl m-3 text-xl border px-4 py-2 pl-4"
+        />
+        <input
+          id="email"
+          type="text"
+          placeholder="Email please!"
+          name="email"
+          class="bg-zinc-600 border-zinc-300 rounded-2xl m-3 text-xl border px-4 py-2 pl-4"
+        />
+        <input
+          id="image"
+          type="text"
+          placeholder="Image url please!"
+          name="image"
+          class="bg-zinc-600 border-zinc-300 rounded-2xl m-3 text-xl border px-4 py-2 pl-4"
+        />
+        <button
+          type="submit"
+          class="bg-zinc-600 border-zinc-400 rounded-2xl text-2xl cursor-pointer submission"
+          style="
+            margin: 12px;
+            padding: 4px;
+            padding-left: 8px;
+            padding-right: 8px;
+          "
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="/scripts/firstscript.js"></script>
+</html>

@@ -1,3 +1,16 @@
-* {
-  color: red;
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+
+h1,
+a {
+  margin: 2.5rem;
+  font-family: "zen Dots";
 }
+
+.gradbut {
+  background-image: linear-gradient(
+    to top right,
+    rgb(10, 181, 118),
+    rgb(15, 131, 73)
+  );
+}
+

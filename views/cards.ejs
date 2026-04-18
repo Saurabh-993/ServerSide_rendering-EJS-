@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheets/index.css" />
+
+    <title>Cards_creation</title>
+  </head>
+  <body class="bg-zinc-950">
+    <h1 class="text-emerald-400 text-3xl font-mono">
+      Hey! Here you can see your cards, hope you will enjoy it:)
+    </h1>
+
+    <div class="flex flex-wrap gap-14">
+        <% cards.forEach((card)=>{  %>
+      <div
+        class="w-[clamp(18rem,20vw,32rem)] h-[clamp(18rem,20vw,32rem)] rounded-3xl bg-zinc-800 border-zinc-100 ml-10 aspect-square"
+      >
+        <div
+          class="aspect-square w-[90%] h-[75%] rounded-2xl m-4 mb-0 overflow-hidden bg-transparent"
+        >
+          <img src="<%= card.image %>" alt="<%= card.name %>"" >
+        </div>
+        <div class="grid grid-cols-8 grid-rows-2 w-[90%] m-4 my-0.5">
+          <h2 class="font-bold text-zinc-300 col-span-3 pl-1"> <%= card.name %> </h2>
+          <h3
+            class="text-zinc-300 text-sm mt-0.5 col-span-5 overflow-x-clip hover:overflow-visible"
+          >
+            <%= card.email %>
+          </h3>
+          <a style="margin:0;padding:0;box-sizing: border-box; font-family: sans-serif;"
+          href="cards/<%=card._id%>/edit"
+           class="text-purple-400 py-px px-1 rounded-xl font-bold bg-transparent mr-0.5 hover:text-purple-500 col-span-4 justify-self-start hover:cursor-pointer">
+            Edit card!
+        </a>
+          <a style="margin:0;padding:0;box-sizing: border-box; font-family: sans-serif;"
+            class="text-red-500 rounded-xl font-bold ml-0.5 hover:text-red-400 col-span-4"
+            href="./cards/<%= card._id %>"
+          >
+            Delete user
+        </a>
+        </div>
+      </div>
+       <% }) %>
+    </div>
+    <div class="absolute top-2.5 right-1.5">
+      <a
+        class="text-amber-100 gradbut p-1 rounded-2xl text-[16px]"
+        style="
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          margin-right: 1.5rem;
+        "
+        href="./creation"
+      >
+        Create new!
+      </a>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="/scripts/firstscript.js"></script>
+</html>
